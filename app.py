@@ -1,19 +1,21 @@
 import streamlit as st
 import openai
-import os
-from dotenv import load_dotenv
 
-# Load environment variables from .env file
-load_dotenv()
 
-# Set your OpenAI API key
-openai.api_key = os.getenv("OPENAI_API_KEY")
+
 
 # Customize the page configuration (including the favicon)
 st.set_page_config(
     page_title="Political Bias Detection App",
     page_icon="📜"
 )
+
+
+
+api_key = st.text_area("Enter an OpenAI API key:", "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")
+
+# Set your OpenAI API key
+openai.api_key = api_key
 
 # Streamlit app header with a more prominent title and subtitle 
 st.title("Political Bias Detection App")
