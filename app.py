@@ -12,7 +12,7 @@ st.set_page_config(
 
 
 
-api_key = st.text_area("Enter an OpenAI API key:", "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")
+api_key = st.text_area("Enter an OpenAI API key:", "")
 
 # Set your OpenAI API key
 openai.api_key = api_key
